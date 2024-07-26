@@ -4,7 +4,7 @@ To create vir env - conda create -p env python=3.10 -y
 To install requirements - pip install -r requirement.txt
 
 To activate local environment - source activate ./env
-To run on Streamlit - streamlit run your_script.py
+To run on Streamlit - streamlit run StreamlitAPP.py/ streamlit run your_script.py
 
 For AWS EC2 instance:
 Login | Config Ubuntu machine | Launch instance
