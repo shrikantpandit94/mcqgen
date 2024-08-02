@@ -1,7 +1,7 @@
 Hello
 
 To create vir env - conda create -p env python=3.10 -y 
-To install requirements - pip install -r requirement.txt
+To install requirements - pip install -r requirements.txt
 
 To activate local environment - source activate ./env
 To run on Streamlit - streamlit run StreamlitAPP.py/ streamlit run your_script.py
