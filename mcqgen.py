@@ -84,7 +84,7 @@ review_chain=LLMChain(llm=llm, prompt=quiz_evaluation_prompt, output_key="review
 generate_evaluate_chain=SequentialChain(chains=[quiz_chain, review_chain], input_variables=["text", "number", "subject", "tone", "response_json"],
                                         output_variables=["quiz", "review"], verbose=True,)
 
-file_path=r"/workspaces/google_generativeai/mcqgen_doc/data.txt"
+file_path=r"/workspaces/mcqgen/data.txt"
 with open(file_path, 'r') as file:
     TEXT = file.read()
 # Serialize the Python dictionary into a JSON-formatted string
@@ -109,8 +109,6 @@ print(f"Total Tokens:{cb.total_tokens}")
 print(f"Prompt Tokens:{cb.prompt_tokens}")
 print(f"Completion Tokens:{cb.completion_tokens}")
 print(f"Total Cost:{cb.total_cost:.3f}")
-
-import json
 
 quiz = response.get("quiz")
 quiz = json.loads(quiz)
